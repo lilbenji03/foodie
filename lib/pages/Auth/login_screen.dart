@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodie/pages/Auth/signup_screen.dart';
-import 'package:foodie/pages/home/home_screen.dart';
+import 'package:foodie/pages/screens/on_boarding_screen.dart';
 import 'package:foodie/service/auth_service.dart';
 import 'package:foodie/widgets/my_button.dart';
 import 'package:foodie/widgets/snack_bar.dart';
@@ -32,10 +32,9 @@ class _SignupScreenState extends State<LoginScreen> {
       setState(() {
         isLoading = false;
       });
-      showSnackBar(context, "Signup successful! proceding to login");
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => HomeScreen()),
+        MaterialPageRoute(builder: (_) => OnBoardingScreen()),
       );
     } else {
       // error case
